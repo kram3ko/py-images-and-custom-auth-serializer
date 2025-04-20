@@ -6,10 +6,10 @@ User = get_user_model()
 
 
 class EmailAuthTokenSerializer(serializers.Serializer):
-    email = serializers.CharField(label=_("Email"), write_only=True)
+    email = serializers.CharField(label=_("Email Address"), write_only=True)
     password = serializers.CharField(
         label=_("Password"),
-        style={"input_type': 'password"},
+        style={"input_type": "password"},
         trim_whitespace=False,
         write_only=True
     )
