@@ -3,6 +3,7 @@ from django.db import models
 from django.conf import settings
 from django.db.models import UniqueConstraint
 
+
 class CinemaHall(models.Model):
     name = models.CharField(max_length=255)
     rows = models.IntegerField()
@@ -96,9 +97,9 @@ class Ticket(models.Model):
                 raise error_to_raise(
                     {
                         ticket_attr_name: f"{ticket_attr_name} "
-                                          f"number must be in available range: "
-                                          f"(1, {cinema_hall_attr_name}): "
-                                          f"(1, {count_attrs})"
+                        f"number must be in available range: "
+                        f"(1, {cinema_hall_attr_name}): "
+                        f"(1, {count_attrs})"
                     }
                 )
 

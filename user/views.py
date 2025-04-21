@@ -16,7 +16,6 @@ class CreateTokenView(ObtainAuthToken):
     serializer_class = EmailAuthTokenSerializer
 
 
-
 class ManageUserView(generics.RetrieveUpdateAPIView):
     serializer_class = UserSerializer
     permission_classes = [IsAuthenticated]
